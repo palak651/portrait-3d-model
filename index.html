@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My 3D Portrait</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #101827, #26364d);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cbd5e1;
+      text-align: center;
+    }
+
+    .viewer {
+      width: 100%;
+      max-width: 900px;
+      height: 70vh;
+      min-height: 400px;
+      margin-top: 20px;
+      background: #f4f4f5;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background: #f4f4f5;
+      --poster-color: #f4f4f5;
+    }
+
+    .instructions {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    a {
+      color: #93c5fd;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My 3D Portrait</h1>
+  <p>Interactive 3D model — rotate, zoom and explore.</p>
+
+  <div class="viewer">
+    <model-viewer
+      src="./clean_portrait.glb"
+      alt="3D portrait model"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1"
+      interaction-prompt="auto"
+      loading="eager">
+    </model-viewer>
+  </div>
+
+  <p class="instructions">
+    Drag to rotate · Scroll or pinch to zoom
+  </p>
+</body>
+</html>
+```
